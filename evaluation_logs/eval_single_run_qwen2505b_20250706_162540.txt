@@ -1,0 +1,285 @@
+============================================================
+             GDPR RAG EVALUATION LOG
+============================================================
+MODEL: qwen2.5:0.5b
+RUN MODE: single_run
+DATE: 2025-07-06T16:25:40.824407
+============================================================
+
+------------------------------------------------------------
+TEST CASE 1: Core Definitions
+------------------------------------------------------------
+QUESTION:
+What constitutes 'personal data' under GDPR?
+
+GOLDEN ANSWER:
+Personal data is any information that relates to an identified or identifiable living individual. This includes obvious identifiers like a name or an ID number, as well as other data like location, IP address, or biometric data that can be used to identify a person.
+
+--- NO-RAG RESPONSE (took 11.66 seconds) ---
+
+  SYSTEM PROMPT:
+  You are an expert assistant on legal and data privacy topics. Answer the user's question based on your general knowledge.
+
+  USER PROMPT:
+  What constitutes 'personal data' under GDPR?
+
+  MODEL RESPONSE:
+  GDPR (General Data Protection Regulation) defines personal data as the personal information of natural persons or other specific groups that can be directly linked to an individual through one or more of their characteristics, such as name, address, age, etc. Here are some key points about personal data according to GDPR:
+
+1. Direct Linkage: Personal data should have a direct and unambiguous link with an identified natural person.
+
+2. Individuality: It should not be based on any other information that can identify the individual beyond this one or more characteristics mentioned above.
+
+3. Access and Use: Only certain individuals, such as those who provide personal data to organizations processing it for the purpose of selling them data or services, are allowed to access and use the personal data.
+
+4. Purpose Limitation: Personal data should not be used for purposes other than intended by its owner.
+
+5. Accuracy: Personal information must be accurate and up-to-date; if it is inaccurate or outdated, it can lead to problems in processing the data.
+
+6. Transfer: The transfer of personal data from one place to another should only occur with the explicit consent of the person whose data was transferred.
+
+7. Purpose Sharing: Only certain purposes such as marketing, advertising, and transaction processing are allowed for sharing personal data.
+
+8. Storage: Personal data must be stored securely, using measures that prevent unauthorized access or disclosure.
+
+9. Processing: The processing of personal data should only be done with the explicit consent of individuals whose data is being processed.
+
+10. Notification: Individuals should receive notification when their personal data is changed, lost, or is transferred to a third party.
+
+--- RAG RESPONSE (took 35.64 seconds) ---
+
+  DEBUGGING INFO (RAW RETRIEVAL + PROMPT STRUCTURE):
+
+  [DEBUG] RAW RETRIEVED CHUNKS (Top 10):
+--- RAW CHUNK 1 (Score: 0.7453) ---
+(52)   Derogating from the prohibition on processing special categories of personal data should also be allowed when
+             provided for in Union or Member State law and subject to suitable safeguards, so as to protect personal data and
+             other fundamental rights, where it is in the public interest to do so, in particular processing personal data in the
+             field of employment law, social protection law including pensions and for health security, monitoring and alert
+             purposes, the prevention or control of communicable diseases and other serious threats to health. 
+--- RAW CHUNK 2 (Score: 4.7260) ---
+5.     In the context of the use of information society services, and notwithstanding Directive 2002/58/EC, the data
+       subject may exercise his or her right to object by automated means using technical specifications.
+        6.     Where personal data are processed for scientific or historical research purposes or statistical purposes pursuant to
+       Article 89(1), the data subject, on grounds relating to his or her particular situation, shall have the right to object to
+       processing of personal data concerning him or her, unless the processing is necessary for the performance of a task
+       carried out for reasons of public interest.
+                                                                Article 22
+                                       Automated individual decision-making, including profiling
+       1.     The data subject shall have the right not to be subject to a decision based solely on automated processing,
+       including profiling, which produces legal effects concerning him or her or similarly significantly affects him or her.
+        2.    
+--- RAW CHUNK 3 (Score: 3.5138) ---
+In particular, the specific purposes for which personal data are processed
+              should be explicit and legitimate and determined at the time of the collection of the personal data. 
+--- RAW CHUNK 4 (Score: 4.0419) ---
+---
+L 119/12            EN                        Official Journal of the European Union                                      4.5.2016
+      (60)   The principles of fair and transparent processing require that the data subject be informed of the existence of the
+             processing  operation  and  its purposes.  The  controller should  provide  the  data subject  with any  further
+             information necessary to ensure fair and transparent processing taking into account the specific circumstances
+             and context in which the personal data are processed.  Furthermore, the data subject should be informed of the
+             existence of profiling and the consequences of such profiling.  Where the personal data are collected from the
+             data subject, the data subject should also be informed whether he or she is obliged to provide the personal data
+             and of the consequences, where he or she does not provide such data.  That information may be provided in
+             combination with standardised icons in order to give in an easily visible, intelligible and clearly legible manner, a
+             meaningful overview of the intended processing.  Where the icons are presented electronically, they should be
+             machine-readable.
+       (61)   The information in relation to the processing of personal data relating to the data subject should be given to him
+             or her at the time of collection from the data subject, or, where the personal data are obtained from another
+             source, within a reasonable period, depending on the circumstances of the case. 
+--- RAW CHUNK 5 (Score: 2.8289) ---
+Personal data in documents held by a public authority or a public body should be able to be publicly disclosed
+              by that authority or body if the disclosure is provided for by Union or Member State law to which the public
+              authority or public body is subject. 
+--- RAW CHUNK 6 (Score: 5.3843) ---
+The data subject shall have the right to object, on grounds relating to his or her particular situation, at any time to
+       processing of personal data concerning him or her which is based on point (e) or (f) of Article 6(1), including profiling
+       based on those provisions.  The controller shall no longer process the personal data unless the controller demonstrates
+       compelling legitimate grounds for the processing which override the interests, rights and freedoms of the data subject or
+       for the establishment, exercise or defence of legal claims.
+        2.    Where personal data are processed for direct marketing purposes, the data subject shall have the right to object at
+       any time to processing of personal data concerning him or her for such marketing, which includes profiling to the
+       extent that it is related to such direct marketing.
+        3.    Where the data subject objects to processing for direct marketing purposes, the personal data shall no longer be
+       processed for such purposes.
+ ---
+L 119/46             EN                         Official Journal of the European Union                                        4.5.2016
+       4.    
+--- RAW CHUNK 7 (Score: 4.3460) ---
+Such
+              specific protection should, in particular, apply to the use of personal data of children for the purposes of
+              marketing or creating personality or user profiles and the collection of personal data with regard to children
+              when using services offered directly to a child.  The consent of the holder of parental responsibility should not be
+              necessary in the context of preventive or counselling services offered directly to a child.
+        (39)   Any processing of personal data should be lawful and fair.  It should be transparent to natural persons that
+              personal data concerning them are collected, used, consulted or otherwise processed and to what extent the
+              personal data are or will be processed.  The principle of transparency requires that any information and communi
+              cation relating to the processing of those personal data be easily accessible and easy to understand, and that clear
+              and plain language be used.  That principle concerns, in particular, information to the data subjects on the
+              identity of the controller and the purposes of the processing and further information to ensure fair and
+              transparent processing in respect of the natural persons concerned and their right to obtain confirmation and
+              communication of personal data concerning them which are being processed.  Natural persons should be made
+              aware of risks, rules, safeguards and rights in relation to the processing of personal data and how to exercise their
+              rights in relation to such processing. 
+--- RAW CHUNK 8 (Score: 4.3050) ---
+(64)   The controller should use all reasonable measures to verify the identity of a data subject who requests access, in
+             particular in the context of online services and online identifiers.  A controller should not retain personal data for
+             the sole purpose of being able to react to potential requests.
+       (65)   A data subject should have the right to have personal data concerning him or her rectified and a ‘right to be
+             forgotten’ where the retention of such data infringes this Regulation or Union or Member State law to which the
+             controller is subject.  In particular, a data subject should have the right to have his or her personal data erased
+             and no longer processed where the personal data are no longer necessary in relation to the purposes for which
+             they are collected or otherwise processed, where a data subject has withdrawn his or her consent or objects to
+             the processing of personal data concerning him or her, or where the processing of his or her personal data does
+             not otherwise comply with this Regulation.  That right is relevant in particular where the data subject has given
+---
+4.5.2016            EN                         Official Journal of the European Union                                      L 119/13
+             his or her consent as a child and is not fully aware of the risks involved by the processing, and later wants to
+             remove such personal data, especially on the internet.  The data subject should be able to exercise that right
+             notwithstanding the fact that he or she is no longer a child.  However, the further retention of the personal data
+             should be lawful where it is necessary, for exercising the right of freedom of expression and information, for
+             compliance with a legal obligation, for the performance of a task carried out in the public interest or in the
+             exercise of official authority vested in the controller, on the grounds of public interest in the area of public
+             health, for archiving purposes in the public interest, scientific or historical research purposes or statistical
+             purposes, or for the establishment, exercise or defence of legal claims.
+      
+--- RAW CHUNK 9 (Score: 0.4930) ---
+(40)   In order for processing to be lawful, personal data should be processed on the basis of the consent of the data
+              subject concerned or some other legitimate basis, laid down by law, either in this Regulation or in other Union or
+---
+L 119/8              EN                         Official Journal of the European Union                                       4.5.2016
+                     Member State law as referred to in this Regulation, including the necessity for compliance with the legal
+                 obligation to which the controller is subject or the necessity for the performance of a contract to which the data
+              subject is party or in order to take steps at the request of the data subject prior to entering into a contract.
+       
+--- RAW CHUNK 10 (Score: 3.4662) ---
+(46)      The processing of personal data should also be regarded to be lawful where it is necessary to protect an interest
+                 which is essential for the life of the data subject or that of another natural person. 
+
+  [DEBUG] FINAL CONTEXT SENT TO LLM (after re-ranking and context window):
+The data subject shall have the right to object, on grounds relating to his or her particular situation, at any time to
+       processing of personal data concerning him or her which is based on point (e) or (f) of Article 6(1), including profiling
+       based on those provisions.  The controller shall no longer process the personal data unless the controller demonstrates
+       compelling legitimate grounds for the processing which override the interests, rights and freedoms of the data subject or
+       for the establishment, exercise or defence of legal claims.
+        2.    Where personal data are processed for direct marketing purposes, the data subject shall have the right to object at
+       any time to processing of personal data concerning him or her for such marketing, which includes profiling to the
+       extent that it is related to such direct marketing.
+        3.    Where the data subject objects to processing for direct marketing purposes, the personal data shall no longer be
+       processed for such purposes.
+ ---
+L 119/46             EN                         Official Journal of the European Union                                        4.5.2016
+       4.    
+
+---
+
+5.     In the context of the use of information society services, and notwithstanding Directive 2002/58/EC, the data
+       subject may exercise his or her right to object by automated means using technical specifications.
+        6.     Where personal data are processed for scientific or historical research purposes or statistical purposes pursuant to
+       Article 89(1), the data subject, on grounds relating to his or her particular situation, shall have the right to object to
+       processing of personal data concerning him or her, unless the processing is necessary for the performance of a task
+       carried out for reasons of public interest.
+                                                                Article 22
+                                       Automated individual decision-making, including profiling
+       1.     The data subject shall have the right not to be subject to a decision based solely on automated processing,
+       including profiling, which produces legal effects concerning him or her or similarly significantly affects him or her.
+        2.    
+
+---
+
+Such
+              specific protection should, in particular, apply to the use of personal data of children for the purposes of
+              marketing or creating personality or user profiles and the collection of personal data with regard to children
+              when using services offered directly to a child.  The consent of the holder of parental responsibility should not be
+              necessary in the context of preventive or counselling services offered directly to a child.
+        (39)   Any processing of personal data should be lawful and fair.  It should be transparent to natural persons that
+              personal data concerning them are collected, used, consulted or otherwise processed and to what extent the
+              personal data are or will be processed.  The principle of transparency requires that any information and communi
+              cation relating to the processing of those personal data be easily accessible and easy to understand, and that clear
+              and plain language be used.  That principle concerns, in particular, information to the data subjects on the
+              identity of the controller and the purposes of the processing and further information to ensure fair and
+              transparent processing in respect of the natural persons concerned and their right to obtain confirmation and
+              communication of personal data concerning them which are being processed.  Natural persons should be made
+              aware of risks, rules, safeguards and rights in relation to the processing of personal data and how to exercise their
+              rights in relation to such processing. 
+
+---
+
+(64)   The controller should use all reasonable measures to verify the identity of a data subject who requests access, in
+             particular in the context of online services and online identifiers.  A controller should not retain personal data for
+             the sole purpose of being able to react to potential requests.
+       (65)   A data subject should have the right to have personal data concerning him or her rectified and a ‘right to be
+             forgotten’ where the retention of such data infringes this Regulation or Union or Member State law to which the
+             controller is subject.  In particular, a data subject should have the right to have his or her personal data erased
+             and no longer processed where the personal data are no longer necessary in relation to the purposes for which
+             they are collected or otherwise processed, where a data subject has withdrawn his or her consent or objects to
+             the processing of personal data concerning him or her, or where the processing of his or her personal data does
+             not otherwise comply with this Regulation.  That right is relevant in particular where the data subject has given
+---
+4.5.2016            EN                         Official Journal of the European Union                                      L 119/13
+             his or her consent as a child and is not fully aware of the risks involved by the processing, and later wants to
+             remove such personal data, especially on the internet.  The data subject should be able to exercise that right
+             notwithstanding the fact that he or she is no longer a child.  However, the further retention of the personal data
+             should be lawful where it is necessary, for exercising the right of freedom of expression and information, for
+             compliance with a legal obligation, for the performance of a task carried out in the public interest or in the
+             exercise of official authority vested in the controller, on the grounds of public interest in the area of public
+             health, for archiving purposes in the public interest, scientific or historical research purposes or statistical
+             purposes, or for the establishment, exercise or defence of legal claims.
+      
+
+---
+
+---
+L 119/12            EN                        Official Journal of the European Union                                      4.5.2016
+      (60)   The principles of fair and transparent processing require that the data subject be informed of the existence of the
+             processing  operation  and  its purposes.  The  controller should  provide  the  data subject  with any  further
+             information necessary to ensure fair and transparent processing taking into account the specific circumstances
+             and context in which the personal data are processed.  Furthermore, the data subject should be informed of the
+             existence of profiling and the consequences of such profiling.  Where the personal data are collected from the
+             data subject, the data subject should also be informed whether he or she is obliged to provide the personal data
+             and of the consequences, where he or she does not provide such data.  That information may be provided in
+             combination with standardised icons in order to give in an easily visible, intelligible and clearly legible manner, a
+             meaningful overview of the intended processing.  Where the icons are presented electronically, they should be
+             machine-readable.
+       (61)   The information in relation to the processing of personal data relating to the data subject should be given to him
+             or her at the time of collection from the data subject, or, where the personal data are obtained from another
+             source, within a reasonable period, depending on the circumstances of the case. 
+
+  MODEL RESPONSE:
+  Under General Data Protection Regulation (GDPR), "personal data" refers to any information relating to individuals or their personal actions, such as:
+
+1. Physical characteristics
+2. Biometric data (e.g., fingerprints, voiceprint)
+3. Identification numbers
+4. Bioinformatics identifiers (e.g., medical records)
+5. Account and password details for online services
+6. Contact information for children under 18
+
+The regulation defines personal data in Article 7 as "any information that relates to any person or their legal entities, such as names, addresses, phone numbers, etc." The term does not include any information that is protected by law (e.g., trade secrets).
+
+It's important to note that the specific collection and processing of individual data can vary depending on the circumstances. GDPR outlines a range of scenarios where individuals may be required to provide their personal data, including:
+
+- Direct marketing
+- Online advertising
+- Personal data used for scientific or historical research purposes
+- Direct contact with children under certain age limits
+
+Data subjects must have the right to object to the processing of their personal data at any time and request it to be removed from their system. This right applies in cases where:
+
+- Personal data is being processed for marketing purposes
+- Data is being used for direct marketing or creating individual profiles
+- Personal data is collected with consent, but this process may have negative impacts on the individual
+
+Data subjects can exercise these rights through various means, such as automated processing (e.g., profiling), and it's their responsibility to ensure that they are provided with clear, transparent, and easy-to-understand information about how their personal data will be used.
+
+============================================================
+
+
+------------------------------------------------------------
+PERFORMANCE SUMMARY
+------------------------------------------------------------
+Average RAG Response Time:       35.64 seconds
+Average No-RAG Response Time:    11.66 seconds
+Total Model Test Time:           47.31 seconds
+------------------------------------------------------------
